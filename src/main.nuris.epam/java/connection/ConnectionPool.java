@@ -25,7 +25,6 @@ public class ConnectionPool {
     }
 
     private void init() {
-
         loadProperties();
         connections = new ResourcesQueue<Connection>(CONNECTION_POOL_SIZE);
         try {
@@ -70,5 +69,6 @@ public class ConnectionPool {
         }
         return connectionPool;
     }
+
 
 }
