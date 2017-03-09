@@ -1,16 +1,27 @@
 package domain;
 
+import dao.Identified;
+
 import java.io.InputStream;
 
 /**
  * Created by User on 09.03.2017.
  */
-public class BookInfo extends CommonEntity{
+public class BookInfo implements Identified<Integer> {
+
     private int idBook;
     private int amount;
     private int price;
     private InputStream cover;
     private InputStream electronicVersion;
+    private Integer id;
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     public int getIdBook() {
         return idBook;

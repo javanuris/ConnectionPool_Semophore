@@ -1,11 +1,13 @@
 package domain;
 
+import dao.Identified;
+
 import java.util.Date;
 
 /**
  * Created by User on 09.03.2017.
  */
-public class Person extends CommonEntity {
+public class Person implements Identified<Integer> {
     private String firstName;
     private String lastName;
     private String middle_name;
@@ -17,6 +19,18 @@ public class Person extends CommonEntity {
     public int getCityId() {
         return cityId;
     }
+
+    private Integer id;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+
 
     public void setCityId(int cityId) {
         this.cityId = cityId;

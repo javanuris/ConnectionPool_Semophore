@@ -1,12 +1,6 @@
-package ru.dokwork.daotalk.dao;
+package dao;
 
-import java.io.Serializable;
+public interface Identified<PK> {
 
-/**
- * Интерфейс идентифицируемых объектов.
- */
-public interface Identified<PK extends Serializable> {
-
-    /** Возвращает идентификатор объекта */
     public PK getId();
 }

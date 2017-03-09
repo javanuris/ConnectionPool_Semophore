@@ -1,12 +1,15 @@
 package domain;
 
+import dao.Identified;
+
 /**
  * Created by User on 09.03.2017.
  */
-public class Author extends CommonEntity {
+public class Author implements Identified<Integer> {
     private String firstName;
     private String lastName;
     private String middle_name;
+
 
 
     public String getFirstName() {
@@ -36,5 +39,13 @@ public class Author extends CommonEntity {
     @Override
     public String toString() {
         return firstName + "/"+lastName+"/"+middle_name;
+    }
+    private Integer id;
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 }

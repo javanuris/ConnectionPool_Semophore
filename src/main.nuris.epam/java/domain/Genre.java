@@ -1,10 +1,20 @@
 package domain;
 
+import dao.Identified;
+
 /**
  * Created by User on 09.03.2017.
  */
-public class Genre extends CommonEntity {
+public class Genre implements Identified<Integer> {
     private String name;
+    private Integer id;
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;

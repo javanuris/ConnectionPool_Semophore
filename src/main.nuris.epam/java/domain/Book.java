@@ -1,16 +1,27 @@
 package domain;
 
+import dao.Identified;
+
 import java.util.Date;
 
 /**
  * Created by User on 09.03.2017.
  */
-public class Book extends CommonEntity{
+public class Book implements Identified<Integer> {
     private String name;
     private Date year;
     private int genreId;
     private int authorId;
     private int publicsherId;
+
+    private Integer id;
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     public int getGenreId() {
         return genreId;

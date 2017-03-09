@@ -6,9 +6,9 @@ import java.util.List;
 /**
  * Created by User on 09.03.2017.
  */
-public abstract class AbstractJDBCDao<T extends Identified<PK>,PK extends Integer> implements GenericDao<T , PK> {
+public abstract class AbstractDao<T extends Identified<PK>,PK extends Integer> implements GenericDao<T , PK> {
     Connection connection = null;
-    public AbstractJDBCDao(Connection connection){
+    public AbstractDao(Connection connection){
         this.connection = connection;
     }
     public T create() {
